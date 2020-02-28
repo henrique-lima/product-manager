@@ -19,6 +19,14 @@ You can check API's documentation at http://localhost:8090/swagger-ui.html and y
 
 Authentication
 
+Apart from webservices validation, it should be added an authentication method on the client side of the API, so the database resources are not exposed. OAuth protocol is a very used method for REST APIs. Version 2 of this protocol made things easier, without the need of signing each call with a keyed hash, requiring only an access token or a refresh token, if we configure the tokens to expire. Besides this, OAuth is a good choice for identifying personal user accounts and granting proper permissions and it is very straightforward to implement with the Spring Boot security layer.
+
+ Redundancy
+ 
+If we want to scale this application and make it a high availability system, it's important to consider redudancy in the design of the system. DoS attacks can explore different vulnerabities in the system and take down entire servers, so it's important to design a clustering system with a load balancing switch to alternate between the different physical servers. Services like AWS allow elastic load balancing that automatically distributes traffic.
+
+
+
 
 
 

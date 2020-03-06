@@ -7,7 +7,6 @@ import com.product.manager.mapper.OrderMapper;
 import com.product.manager.repository.OrderLineRepository;
 import com.product.manager.repository.OrderRepository;
 import com.product.manager.repository.ProductRepository;
-import com.viabill.productmanager.dto.*;
 import com.product.manager.entity.Order;
 import com.product.manager.entity.OrderLine;
 import com.product.manager.entity.Product;

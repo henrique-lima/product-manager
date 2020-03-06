@@ -1,7 +1,7 @@
 # PRODUCT-MANAGER
 Product/Orders API developed with Spring Boot
 
-The API was developed using Spring Boot framework, based on a @RestController and with a JPA Repository connected to a H2 in memory database. This was the choice for persistency since we are in a dev environment.
+The API was developed using Spring Boot framework, based on a @RestController and with a JPA Repository. In this branch, the database is built on Postgres, which is launched on a docker container.
 
 There is a Spring Boot cache to persist the state of a particular endpoint, in this case the order search endpoint.
 
@@ -11,9 +11,9 @@ The project is covered by unit tests, in this case only the service layer, since
 
 # Installation
 
-To run the application, just launch windows batch file "init.bat" or the equivalent for linux "init.sh". The webservices will be exposed on port 8090.
+This new version uses docker to launch a postgres DB and the spring boot app in different containers. To build it, just call the docker compose command: docker-compose up --build.
 
-You can check API's documentation at http://localhost:8090/swagger-ui.html and you can run the services easily in Postman importing productorders.postman_collection.json file.
+You can check API's documentation at http://192.168.99.100:8090/swagger-ui.html and you can run the services easily in Postman importing productorders.postman_collection.json file (The IP can vary and it corresponds to the docker virtual machine IP).
 
 # Next steps
 
